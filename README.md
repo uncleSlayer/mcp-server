@@ -1,6 +1,6 @@
 # Connecting MCP Clients to PipesHub MCP Server
 
-This guide covers how to connect PipesHub's remote MCP server to **Cursor**, **Claude Code**, **Gemini CLI**, **Codex CLI**, **Claude.ai (Web)**, and **LibreChat** using static OAuth credentials.
+This guide covers how to connect PipesHub's remote MCP server to **Cursor**, **Claude Code**, **Gemini CLI**, **Codex CLI**, **Claude.ai (Web)**, and **LibreChat** using static OAuth credentials or bearer tokens.
 
 PipesHub exposes a remote MCP endpoint over **Streamable HTTP** at `/mcp`.MCP Clients connect to this endpoint directly -- no local npm packages or stdio processes needed.
 
@@ -27,7 +27,6 @@ PipesHub exposes a remote MCP endpoint over **Streamable HTTP** at `/mcp`.MCP Cl
      | **Claude.ai (Web)** | `https://claude.ai/api/mcp/auth_callback` |
      | **Gemini CLI** | `http://localhost:7777/oauth/callback` |
      | **LibreChat** | `http://localhost:3080/api/mcp/<server-identifier>/oauth/callback` |
-     | **Codex CLI** | `https://devbox.example.internal/callback` |
 
 > **Important:** The scopes in [`MCP_SCOPES`](https://github.com/pipeshub-ai/pipeshub-ai/blob/main/backend/env.template#L57) must match the scopes granted to your OAuth app — a mismatch will result in an authorization error.
 
